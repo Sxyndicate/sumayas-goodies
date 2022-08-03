@@ -119,6 +119,139 @@ html::-webkit-scrollbar-thumb{
     display: none;
 }
 
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('../images/back.png') no-repeat 0 -100px;
+    background-size: cover;
+    background-position: center center;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    height: 100%;
+    background-position: center;
+}
+
+.home .homeContent{
+    width: 50%;
+    float: left;
+    padding: 4rem;
+}
+
+.home .homeContent h2{
+    font-size: 7rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    line-height: 7rem;
+    color: var(--black);
+    text-shadow: var(--box-shadow);
+}
+
+.home .homeContent p{
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.home .homeContent .home-btn{
+    height: 3rem;
+}
+
+.home .homeContent .home-btn button{
+    font-size: 1.8rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: .7rem;
+    padding: .7rem 2.4rem;
+    cursor: pointer;
+}
+
+.home .homeContent .home-btn button:hover{
+    font-size: 2rem;
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    color: var(--black);
+}
+
+.product .row{
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.product .product-row .box{
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    background-color: var(--white);
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-radius: 3rem;
+}
+
+/*
+img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    justify-self: center;
+} */
+
+.product .product-row .img img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    justify-self: center;
+}
+
+.product .product-row .img img:hover{
+    transform: scale(1.1);
+}
+
+.product .product-row .content{
+    margin-bottom: 4rem;
+}
+
+.product .product-row .product-content h3{
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.product .product-row .product-content p{
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    color: var(--black);
+}
+
+.product .product-row .product-content .orderNow{
+    height: 3rem;
+    margin-top: 2rem;
+}
+
+.product .product-row .product-content .orderNow button{
+    font-size: 1.8rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: .7rem;
+    padding: .7rem 2rem;
+    cursor: pointer;
+}
+
+.product .product-row .product-content .orderNow button:hover{
+    font-size: 2rem;
+}
+
 
 /* Media queries for web responsiveness */
 @media (max-width:991px){
@@ -134,5 +267,37 @@ html::-webkit-scrollbar-thumb{
 @media (max-width:760px){
     #menu-bar{
         display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 25rem;
+        background-color: var(--white);
+        color: var(--black);
+        height: 80vh;
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        display: block;
+        font-size: 2rem;
+        color: black;
+        margin: 1.5rem;
+    }
+
+    .home .homeContent{
+        margin-left: 0;
+        width: 90%;
+    }
+}
+
+@media (max-width:600px){
+    html{
+        font-size: 50%;
     }
 }
